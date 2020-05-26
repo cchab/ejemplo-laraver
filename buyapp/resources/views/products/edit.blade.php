@@ -11,7 +11,7 @@
 <div class="container">
     <h1>Editar prodcuto</h1>
     <div class="clontainer">
-        <form method="post" action="/products/{{$product->id}}" class="form-horizontal" id="form_products">
+        <form method="post" action="/products/{{$product->id}}" class="form-horizontal" id="form_products" enctype="multipart/form-data">
             @method('PUT')
             @csrf
             <div class="col-lg-6">
@@ -35,7 +35,7 @@
             <div class="col-lg-6">
                 <div class="form-group">
                     <label for="cantidad" class="control-label">Cantidad:</label>
-                    <input type="number" name="cantidad" id="cantidad" class="form-control" value="{{$product->cantidad}}">
+                    <input type="number" name="cantidad" id="cantidad" class="form-control" value="{{$product->quantity}}">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -60,6 +60,12 @@
                 <div class="form-group">
                     <label for="price" class="control-label">Precio unitario:</label>
                     <input type="numeric" id="price" name="price" class="form-control" value="{{$product->unit_price}}">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="imagen" class="control-label">Imagen:</label>
+                    <input type="file" class="form-control"  accept="image/*" name="imagen"/>
                 </div>
             </div>
             <div class="col-lg-6">

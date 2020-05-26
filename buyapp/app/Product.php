@@ -8,7 +8,6 @@ class Product extends Model
 {
     protected $table = 'products';
     protected $primaryKey = 'id';
-    public $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +15,8 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'cantidad', 'stock', 'type', 'unit_price','provider_id'
+        'name', 'quantity', 'stock', 'type', 'unit_price','provider_id','description','photo','city','country',
+        'is_new'
     ];
 
     public function provider()

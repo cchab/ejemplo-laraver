@@ -23,4 +23,10 @@ class Provider extends Model
     {
         return $this->hasMany('App\Product');
     }
+
+    /*
+     * Products
+     *      -provider_id
+     *
+     * */
 }

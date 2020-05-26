@@ -30,7 +30,7 @@
             <tr>
                 <td>{{$p->id}}</td>
                 <td>{{$p->name}}</td>
-                <td>{{$p->cantidad}}</td>
+                <td>{{$p->quantity}}</td>
                 <td>{{$p->stock}}</td>
                 <td>{{$p->unit_price}}</td>
                 <td>{{$p->provider->name}}</td>
